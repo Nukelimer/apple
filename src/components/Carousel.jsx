@@ -245,7 +245,7 @@ function Carousel() {
                   processHandler("pause");
                 }
           }>
-          {/* IF THE IMAGES ARE RENDERING WEIRD CHECK LOGIC  AGAIN */}
+        
           <img src={isLastVideo ? replayImg : isPlaying ? pauseImg : playImg} />
         </button>
       </div>
