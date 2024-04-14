@@ -145,14 +145,13 @@ function Carousel() {
           isPlaying: !previousVideo.isPlaying,
         }));
         break;
-      
-      
-        case "pause":
-          setVideo((previousVideo) => ({
-            ...previousVideo,
-            isPlaying: !previousVideo.isPlaying,
-          }));
-          break;
+
+      case "pause":
+        setVideo((previousVideo) => ({
+          ...previousVideo,
+          isPlaying: !previousVideo.isPlaying,
+        }));
+        break;
 
       default:
         return video;
@@ -173,9 +172,9 @@ function Carousel() {
                     ref={(el) => {
                       return (videoRef.current[i] = el);
                     }}
-                    className={
-                      `${highlight.id === 2 && 'translate-x-44'} pointer-events-none`
-                    }
+                    className={`${
+                      highlight.id === 2 && "translate-x-44"
+                    } pointer-events-none`}
                     onPlay={() => {
                       setVideo((prevVideo) => ({
                         ...prevVideo,
@@ -245,7 +244,6 @@ function Carousel() {
                   processHandler("pause");
                 }
           }>
-        
           <img src={isLastVideo ? replayImg : isPlaying ? pauseImg : playImg} />
         </button>
       </div>
