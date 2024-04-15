@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { heroVideo, smallHeroVideo } from "../utils";
+
 function Hero() {
   const [videoSrc, setVideoSrc] = useState(
     window.innerWidth < 760 ? smallHeroVideo : heroVideo
@@ -48,6 +49,8 @@ function Hero() {
 
   return (
     <section className="w-full nav-height bg-black relative">
+  
+     
       <div className="h-5/6 w-full flex-center flex-col">
         <p className="hero-title ">Iphone 15 Pro Max</p>
 

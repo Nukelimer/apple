@@ -199,7 +199,7 @@ function Carousel() {
                     return (
                       <p
                         key={description}
-                        className="md:text-2xl text-xl font-medium">
+                        className="md:text-6xl text-xl font-medium">
                         {description}
                       </p>
                     );

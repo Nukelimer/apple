@@ -15,7 +15,7 @@ function Highlight() {
       id="highlights"
       className="w-screen h-full common-padding  overflow-hidden bg-zinc">
       <div className="screen-max-width">
-        <div className="flex flex-col md:flex-row justify-between items-center">
+        <div className="flex flex-col md:flex-row justify-between items-center mb-12">
           <h1 id="title" className="section-heading">
             Get the highlights.
           </h1>

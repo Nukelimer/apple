@@ -8,7 +8,7 @@ function NavBar() {
     <header className="w-full py-5 sm:px-10 px-5 flex justify-between items-center">
       <nav className="flex max-md:justify-between w-full screen-max-screen">
         <img src={appleImg} alt="logo" width={16} height={16} />
-        <div className="flex flex-1 justify-between max-md:hidden">
+        <div className="flex flex-1 justify-center max-md:hidden">
           {navLists.map((nav) => {
             return (
               <div
