@@ -2,7 +2,13 @@ import React, { useState } from "react";
 import { appleImg, bagImg, searchImg } from "../utils";
 import { navLists } from "../constants";
 import { LuX } from "react-icons/lu";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 function NavBar() {
+  useGSAP(() => {
+gsap.to('#nav', {})
+
+  }, []);
   const [isOpen, setIsOpen] = useState(false);
   return (
     <header className="w-full py-5 sm:px-10 px-5 flex justify-between items-center">
@@ -27,15 +33,15 @@ function NavBar() {
           className=" hidden max-md:flex p-5 justify-center  items-center flex-col gap-y-2 ">
           <p className="h-[2px] w-[30px]  bg-slate-400"></p>
           <p className="h-[3px] w-[30px]  bg-slate-400"></p>
-          
         </div>
 
         {isOpen && (
-          <div className=" hidden max-md:flex bg-black/80 h-screen absolute right-10 w-full top-0 z-20 left-0 justify-end " onClick={() => {
-            
-            setIsOpen(false)
-         
-          }}>
+          <div
+            className=" hidden transition-all delay-500 max-md:flex bg-black/80 h-screen absolute right-10 w-full top-0 z-20 left-0 justify-end "
+           
+            onClick={() => {
+              setIsOpen(false);
+            }}>
             <div className="flex flex-col w-2/3  bg-slate-800 py-4 rounded-md  justify-start items-center  shadow-lg">
               <div
                 className="self-end pr-9"
@@ -47,6 +53,7 @@ function NavBar() {
               {navLists.map((nav) => {
                 return (
                   <div
+                  id="nav"
                     className="px-6 cursor-pointer  text-sm text-gray hover:underline  my-4 hover:text-slate-600 transition-all"
                     key={nav}>
                     {nav}
