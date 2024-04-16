@@ -122,3 +122,8 @@ canvas {
     @apply opacity-0 translate-y-[100px]
   }
 }
+
+main {
+  touch-action: pan-y;
+  overflow-y: auto;
+}
